@@ -1,0 +1,27 @@
+Question = input("Do you want to encode or decode")
+if Question == "encode":
+    plainText=input("Enter your plain text here")
+    offset=3
+    offset=int(input("Enter offset here"))
+    cypherText=""
+    for i in plainText:
+        temp = ord(i)
+        temp = temp + offset
+        temp = chr(temp)
+        cypherText = cypherText+temp
+
+    print(cypherText)
+elif Question == "decode":
+    cypherText=input("Enter your cypher text here")
+    offset=3
+    offset=int(input("Enter offset here"))
+    plainText=""
+    for i in cypherText:
+        temp = ord(i)
+        temp = temp-offset
+        temp = chr(temp)
+        plainText = plainText+temp
+
+    print(plainText)
+
+else:print("Not a valid option")
